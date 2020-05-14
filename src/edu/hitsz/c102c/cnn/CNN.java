@@ -24,7 +24,7 @@ import edu.hitsz.c102c.util.Util.Operator;
 
 public class CNN implements Serializable {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 337920299147929932L;
 	private static double ALPHA = 0.85;
@@ -675,9 +675,9 @@ public class CNN implements Serializable {
 
 	/**
 	 * 构造者模式构造各层,要求倒数第二层必须为采样层而不能为卷积层
-	 * 
+	 *
 	 * @author jiqunpeng
-	 * 
+	 *
 	 *         创建时间：2014-7-8 下午4:54:29
 	 */
 	public static class LayerBuilder {
@@ -698,11 +698,6 @@ public class CNN implements Serializable {
 		}
 	}
 
-	/**
-	 * 序列化保存模型
-	 * 
-	 * @param fileName
-	 */
 	public void saveModel(String fileName) {
 		try {
 			ObjectOutputStream oos = new ObjectOutputStream(
@@ -716,12 +711,7 @@ public class CNN implements Serializable {
 
 	}
 
-	/**
-	 * 反序列化导入模型
-	 * 
-	 * @param fileName
-	 * @return
-	 */
+
 	public static CNN loadModel(String fileName) {
 		try {
 			ObjectInputStream in = new ObjectInputStream(new FileInputStream(
